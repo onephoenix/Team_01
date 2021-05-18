@@ -32,10 +32,14 @@ class CoffeeDatabaseTest {
 
     @Test
 <<<<<<< HEAD
+<<<<<<< HEAD
     fun insertCoffeeInDatabaseTest() {
 =======
     fun insertCoffeeeInDatabaseTest() {
 >>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]
+=======
+    fun insertCoffeeInDatabaseTest() {
+>>>>>>> 2f8e57c... COFFEE-023-Room-Database added CoffeeWithReviews func. [GA,LS]
         val coffee = Coffee("Barista Espresso", 3.50, "Amazon",
             CoffeeType.NONE, 1.00,1," ",
             "tchibo_barista_espresso")
@@ -48,6 +52,7 @@ class CoffeeDatabaseTest {
         Review(1, 7,5,  "4", coffee.coffeeId),
         Review(3, 4,7,  "5", coffee.coffeeId)
         )
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         coffeeDAO?.addCoffeeWithReviews(coffee, reviews)
@@ -64,12 +69,19 @@ class CoffeeDatabaseTest {
         val coffeeWithReviews = CoffeeWithReviews(coffee, reviews)
         coffeeDAO?.insertCoffee(coffee)
         reviewDao?.insertAll(reviews)
+=======
+>>>>>>> 2f8e57c... COFFEE-023-Room-Database added CoffeeWithReviews func. [GA,LS]
 
+        coffeeDAO?.addCoffeeWithReviews(coffee, reviews)
         val coffeeTest = coffeeDAO?.getAll()?.get(0)
+
         if (coffeeTest != null) {
             Assert.assertEquals(coffee.name, coffeeTest.coffee.name)
+            Assert.assertEquals(reviews.size, coffeeTest.reviews.size)
+            Assert.assertFalse(reviews[0].comment == coffeeTest.reviews[6].comment)
         }
     }
+<<<<<<< HEAD
 
 
 
@@ -79,3 +91,6 @@ class CoffeeDatabaseTest {
     }
 }
 >>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]
+=======
+}
+>>>>>>> 2f8e57c... COFFEE-023-Room-Database added CoffeeWithReviews func. [GA,LS]

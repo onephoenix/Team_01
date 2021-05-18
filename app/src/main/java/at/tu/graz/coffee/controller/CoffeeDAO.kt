@@ -25,6 +25,7 @@ interface CoffeeDAO {
         reviews.forEach{it.coffeeCreatorId = listId.toInt() }
         insertReviewList(reviews)
     }
+<<<<<<< HEAD
 /*
     @Query("SELECT * FROM coffee WHERE coffeeId IN (:coffeeIds)")
 =======
@@ -50,6 +51,8 @@ interface CoffeeDAO {
 =======
     @Insert
     fun insertCoffee(coffee: Coffee)
+=======
+>>>>>>> 2f8e57c... COFFEE-023-Room-Database added CoffeeWithReviews func. [GA,LS]
 /*
     @Query("SELECT * FROM coffee WHERE coffeeId IN (:coffeeIds)")
 >>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]

@@ -15,6 +15,7 @@ data class Review(
     @ColumnInfo(name = "availability") var availability:Int=0,
     @ColumnInfo(name = "comment") var comment:String = "",
     @ColumnInfo(name = "coffeeCreatorId") var coffeeCreatorId: Int
+<<<<<<< HEAD
 ) {
     @PrimaryKey(autoGenerate = true) var reviewId: Int = 0
 }
@@ -40,6 +41,8 @@ data class Review(
     @ColumnInfo(name = "comment") var comment:String = "",
     @ColumnInfo(name = "coffeeCreatorId") val coffeeCreatorId: Int
 >>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]
+=======
+>>>>>>> 2f8e57c... COFFEE-023-Room-Database added CoffeeWithReviews func. [GA,LS]
 ) {
     @PrimaryKey(autoGenerate = true) var reviewId: Int = 0
 }

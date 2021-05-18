@@ -22,11 +22,19 @@ data class Review(
 =======
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity
 data class Review (
     @ColumnInfo(name = "taste") var taste:Int=0,
     @ColumnInfo(name = "cost") var cost:Int=0,
     @ColumnInfo(name = "availability")var availability:Int=0,
+<<<<<<< HEAD
     @ColumnInfo(name = "comment") var comment:String = "")
 >>>>>>> 60c2900... COFFEE-023-Room-database entities, dao's, db [GA,LS]
+=======
+    @ColumnInfo(name = "comment") var comment:String = ""
+) {
+    @PrimaryKey(autoGenerate = true) var id: Int = 0
+}
+>>>>>>> 884385c... COFFEE-023-Room-Database added IDs and initialzed Database [GA,LS]

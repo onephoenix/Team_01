@@ -31,7 +31,11 @@ class CoffeeDatabaseTest {
     }
 
     @Test
+<<<<<<< HEAD
     fun insertCoffeeInDatabaseTest() {
+=======
+    fun insertCoffeeeInDatabaseTest() {
+>>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]
         val coffee = Coffee("Barista Espresso", 3.50, "Amazon",
             CoffeeType.NONE, 1.00,1," ",
             "tchibo_barista_espresso")
@@ -44,6 +48,7 @@ class CoffeeDatabaseTest {
         Review(1, 7,5,  "4", coffee.coffeeId),
         Review(3, 4,7,  "5", coffee.coffeeId)
         )
+<<<<<<< HEAD
 
         coffeeDAO?.addCoffeeWithReviews(coffee, reviews)
         val coffeeTest = coffeeDAO?.getAll()?.get(0)
@@ -55,3 +60,22 @@ class CoffeeDatabaseTest {
         }
     }
 }
+=======
+        val coffeeWithReviews = CoffeeWithReviews(coffee, reviews)
+        coffeeDAO?.insertCoffee(coffee)
+        reviewDao?.insertAll(reviews)
+
+        val coffeeTest = coffeeDAO?.getAll()?.get(0)
+        if (coffeeTest != null) {
+            Assert.assertEquals(coffee.name, coffeeTest.coffee.name)
+        }
+    }
+
+
+
+    @Test
+    fun insertCoffeeWithReviewinDatabaseTest(){
+
+    }
+}
+>>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]

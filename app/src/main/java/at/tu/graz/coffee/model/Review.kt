@@ -25,16 +25,22 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class Review (
+data class Review(
     @ColumnInfo(name = "taste") var taste:Int=0,
     @ColumnInfo(name = "cost") var cost:Int=0,
+<<<<<<< HEAD
     @ColumnInfo(name = "availability")var availability:Int=0,
 <<<<<<< HEAD
     @ColumnInfo(name = "comment") var comment:String = "")
 >>>>>>> 60c2900... COFFEE-023-Room-database entities, dao's, db [GA,LS]
 =======
     @ColumnInfo(name = "comment") var comment:String = ""
+=======
+    @ColumnInfo(name = "availability") var availability:Int=0,
+    @ColumnInfo(name = "comment") var comment:String = "",
+    @ColumnInfo(name = "coffeeCreatorId") val coffeeCreatorId: Int
+>>>>>>> 44fef01... COFFEE-023-Room-Database created test, fixed DAO [GA,LS]
 ) {
-    @PrimaryKey(autoGenerate = true) var id: Int = 0
+    @PrimaryKey(autoGenerate = true) var reviewId: Int = 0
 }
 >>>>>>> 884385c... COFFEE-023-Room-Database added IDs and initialzed Database [GA,LS]

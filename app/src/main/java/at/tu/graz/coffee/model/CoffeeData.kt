@@ -44,6 +44,12 @@ object CoffeeData {
             "tchibo_black_and_white" ,reviews as MutableList<Review>),
     )
 
+<<<<<<< HEAD
+=======
+    fun storeCoffeeInDatabase(){
+        
+    }
+>>>>>>> 2f8e57c... COFFEE-023-Room-Database added CoffeeWithReviews func. [GA,LS]
 
     fun getCoffees() : List<Coffee> {
         return coffees;
